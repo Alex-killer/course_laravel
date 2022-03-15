@@ -25,18 +25,18 @@
                             value="{{ $category->id }}">{{ $category->title }}</option>
                     @endforeach
                 </select>
-                <div class="form-group">
-                    <label for="tags">Tags</label>
-                    <select name="tags[]" id="tags" multiple class="form-control">
-                        @foreach($tags as $tag)
-                            <option
-                                @foreach($post->tags as $postTag)
-                                {{ $tag->id === $postTag->id ? ' selected' : '' }}
-                                @endforeach
-                                value="{{ $tag->id }}">{{ $tag->title }}</option>
-                        @endforeach
-                    </select>
-                </div>
+            </div>
+            <div class="form-group">
+                <label for="tags">Tags</label>
+                <select name="tags[]" id="tags" multiple class="form-control">
+                    @foreach($tags as $tag)
+                        <option
+                            @foreach($post->tags as $postTag)
+                            {{ $tag->id === $postTag->id ? ' selected' : '' }}
+                            @endforeach
+                            value="{{ $tag->id }}">{{ $tag->title }}</option>
+                    @endforeach
+                </select>
             </div>
             <button type="submit" class="btn btn-primary">Update</button>
         </form>
