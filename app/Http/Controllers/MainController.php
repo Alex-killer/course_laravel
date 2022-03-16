@@ -8,8 +8,7 @@ use Illuminate\Http\Request;
 class MainController extends Controller
 {
     public function index(){
-        $posts = Post::all();
 
-        return view('main', compact('posts'));
+        return view('main');
     }
 }
